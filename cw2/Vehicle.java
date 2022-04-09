@@ -14,7 +14,7 @@ public class Vehicle {
     private Brand brand;
     private Insurance insurance;
 
-    public Vehicle(String name, LocalDate creationDate, int wheel1, int wheel2, Brand brand, Insurance insurance) {
+    public Vehicle(String name, LocalDate creationDate, int wheel1, int wheel2, Brand brand, Insurance insurance) throws ValidationException {
         setName(name);
         setCreationDate(creationDate);
         this.wheels = new ArrayList<>();
@@ -25,7 +25,7 @@ public class Vehicle {
         extent.add(this);
     }
 
-    public Vehicle(String name, int wheel1, int wheel2, Brand brand, String insName, int insNum) {
+    public Vehicle(String name, int wheel1, int wheel2, Brand brand, String insName, int insNum) throws ValidationException {
         setName(name);
         this.wheels = new ArrayList<>();
         addWheel(wheel1);
@@ -39,10 +39,8 @@ public class Vehicle {
         return name;
     }
 
-    public void setName(String name) {
-        if(name == null || name.isEmpty()) {
-            throw new ValidationException("Name cannot be empty");
-        }
+    public void setName(String name) throws ValidationException {
+        if(name == null || name.isEmpty()) throw new ValidationException("Name cannot be empty");
         this.name = name;
     }
 
@@ -65,12 +63,11 @@ public class Vehicle {
         wheels.add(number);
     }
 
-    public void removeWheels(int number)
-    {
+    public void removeWheels(int number) throws ValidationException {
         //checks?
         if(wheels.size() <= 2)
         {
-            throw new ValidationException("Wheels size should be > 2");
+          throw new ValidationException("Wheels size should be > 2");
         }
         wheels.remove(number);
     }

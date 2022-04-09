@@ -1,0 +1,92 @@
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+public class Osoba{
+
+    String name;
+    String surname;
+    LocalDate dateOfBirth;
+    Double age;
+    Adres adres;
+
+    ArrayList<Ksiazka> pozyczoneKsiazki;
+
+
+    public Osoba(String name, String surname, LocalDate dateOfBirth, Double age, Adres adres, ArrayList<Ksiazka> pozyczoneKsiazki) {
+        this.name = name;
+        this.surname = surname;
+        this.dateOfBirth = dateOfBirth;
+        this.age = age;
+        this.adres = adres;
+        this.pozyczoneKsiazki = pozyczoneKsiazki;
+    }
+
+
+public void PublishBook(){
+
+
+}
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public Double getAge() {
+        return age;
+    }
+
+    public void setAge(Double age) {
+        this.age = age;
+    }
+
+
+    public Adres getAdres() {
+        return adres;
+    }
+
+    public void setAdres(Adres adres) {
+        this.adres = adres;
+    }
+
+
+    public ArrayList<Ksiazka> getPozyczoneKsiazki() {
+        return pozyczoneKsiazki;
+    }
+
+    public void setPozyczoneKsiazki(ArrayList<Ksiazka> pozyczoneKsiazki) {
+        this.pozyczoneKsiazki = pozyczoneKsiazki;
+    }
+
+    @Override
+    public String toString() {
+        return "Osoba{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", age=" + age +
+                ", adres=" + adres +
+                ", pozyczoneKsiazki=" + pozyczoneKsiazki +
+                '}';
+    }
+
+}
