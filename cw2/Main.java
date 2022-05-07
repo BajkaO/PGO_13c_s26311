@@ -3,7 +3,7 @@
 import java.time.LocalDate;
 
 public class Main {
-
+/*
     public static void main(String[] args) {
         System.out.println(Vehicle.getExtent().size());
         Vehicle vehicle = new Vehicle("name", LocalDate.now(),1,1, Brand.BMW, new Insurance(null,0));
@@ -23,5 +23,5 @@ public class Main {
         }
         System.out.println(Vehicle.getExtent().size());
     }
-
+*/
 }

@@ -11,10 +11,10 @@ public class Ksiazka {
     Double age;
     int borrowCount;
     boolean isAva;
-    ArrayList<Osoba> authors;
+    //ArrayList<Osoba> authors;
 
 
-    public Ksiazka(Long ID, String name, Genre genre, Lang lang, LocalDate publishDate, Double age, int borrowCount, boolean isAva,ArrayList<Osoba> authors) {
+    public Ksiazka(Long ID, String name, Genre genre, Lang lang, LocalDate publishDate, Double age, int borrowCount, boolean isAva) {
         this.ID = ID;
         this.name = name;
         this.genre = genre;
@@ -23,7 +23,7 @@ public class Ksiazka {
         this.age = age;
         this.borrowCount = borrowCount;
         this.isAva = isAva;
-        this.authors = authors;
+    //    this.authors = authors;
     }
 
     public Long getID() {
@@ -90,13 +90,13 @@ public class Ksiazka {
         isAva = ava;
     }
 
-    public ArrayList<Osoba> getAuthors() {
-        return authors;
-    }
+   // public ArrayList<Osoba> getAuthors() {
+  //      return authors;
+  //  }
 
-    public void setAuthors(ArrayList<Osoba> authors) {
-        this.authors = authors;
-    }
+ //   public void setAuthors(ArrayList<Osoba> authors) {
+ //       this.authors = authors;
+  //  }
 
     @Override
     public String toString() {
@@ -109,7 +109,7 @@ public class Ksiazka {
                 ", age=" + age +
                 ", borrowCount=" + borrowCount +
                 ", isAva=" + isAva +
-                ", authors=" + authors +
+               // ", authors=" + authors +
                 '}';
     }
 }
